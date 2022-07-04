@@ -8,6 +8,10 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh |
 RUNZSH='no' sh install.sh || true
 rm -r install.sh
 
+# Autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions /home/$USER/.zsh/zsh-autosuggestions
+
+# .zshrc
 echo "export ZSH='$HOME/.oh-my-zsh'
 ZSH_THEME='pmcgee'
 zstyle ':omz:update' mode auto
@@ -15,5 +19,5 @@ plugins=(git)
 source /home/$USER/.oh-my-zsh/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
-export PATH=$(python3 -c 'import site; print(site.USER_BASE + \"/bin\")'):$PATH" > /home/$USER/.zshrc || true
-
+export PATH=/home/$USER/.local/bin:$PATH
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" > /home/$USER/.zshrc || true
