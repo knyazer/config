@@ -1,0 +1,8 @@
+export ZSH='/root/.oh-my-zsh'
+ZSH_THEME='gallois'
+zstyle ':omz:update' mode auto
+plugins=(git)
+source /home/knyaz/.oh-my-zsh/oh-my-zsh.sh
+export LANG=en_US.UTF-8
+export EDITOR='vim'
+export PATH=:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
