@@ -40,7 +40,8 @@ apt upgrade -y
 # vim - console editor
 # gh - github cli
 apt_install htop neofetch docker clang lldb lld curl aptitude terminator base-devel cmake node python3.10 python3-pip \
-        python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools build-essential vlc || true
+        python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools build-essential vlc openresolv \
+        wireguard || true
 
 # qbittorrent - cute torrent client
 add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable &&
@@ -82,5 +83,6 @@ gh auth login
 git config --global user.email $EMAIL
 git config --global user.name $NAME
 
-# Final logs
-echo "You may want to run sudo update-alternatives --config x-terminal-emulator to set the correct terminal emulator (terminator)"
+# Wireguard autostart config
+read -p "You have to add the wireguard vpn keys to the /etc/wireguard. After you do that, press any key to continue. Otherwise, press ctrl+c to exit installer"
+source ubuntu_vpn_setup.sh
