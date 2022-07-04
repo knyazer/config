@@ -40,7 +40,7 @@ apt upgrade -y
 # vim - console editor
 # gh - github cli
 apt_install htop neofetch docker clang lldb lld curl aptitude terminator base-devel cmake node python3.10 python3-pip \
-        python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools || true
+        python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools build-essential vlc || true
 
 # qbittorrent - cute torrent client
 add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable &&
