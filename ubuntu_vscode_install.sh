@@ -17,8 +17,8 @@ sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packag
 rm -f packages.microsoft.gpg
 
 # Have no idea why this needed, but in microsoft tutorial they use it
-apt-get install apt-transport-https || true
+apt-get install -y apt-transport-https || true
 
 # Install (or update) VSCode
 apt-get update
-apt-get install code || true
+apt-get install -y code || true

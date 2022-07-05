@@ -64,6 +64,9 @@ snap install telegram-desktop
 # Spotify
 snap install spotify
 
+# Discord
+snap install discord
+
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
 dpkg -i google-chrome-stable_current_amd64.deb || true
@@ -71,7 +74,7 @@ rm -f google-chrome-stable_current_amd64.deb || true
 
 # Sublime - text editor
 wget -O- https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | tee /usr/share/keyrings/sublimehq.gpg || true
-echo 'deb [signed-by=/usr/share/keyrings/sublimehq.gpg] https://download.sublimetext.com/ apt/stable/' | sudo tee /etc/apt/sources.list.d/sublime-text.list
+echo 'deb [signed-by=/usr/share/keyrings/sublimehq.gpg] https://download.sublimetext.com/ apt/stable/' | tee /etc/apt/sources.list.d/sublime-text.list
 apt-get update
 apt_install sublime-text || true
 
