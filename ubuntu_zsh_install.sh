@@ -15,7 +15,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions /home/$USER/.zsh/zsh-
 echo "export ZSH='$HOME/.oh-my-zsh'
 ZSH_THEME='pmcgee'
 zstyle ':omz:update' mode auto
-plugins=(git screen gh sudo zsh-navigation-tools)
+plugins=(git screen gh sudo zsh-navigation-tools copybuffer)
 source /home/$USER/.oh-my-zsh/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
