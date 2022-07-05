@@ -9,7 +9,7 @@ RUNZSH='no' sh install.sh || true
 rm -r install.sh
 
 # Autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions /home/$USER/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions /home/$USER/.zsh/zsh-autosuggestions || true
 
 # .zshrc
 echo "export ZSH='$HOME/.oh-my-zsh'
@@ -20,4 +20,9 @@ source /home/$USER/.oh-my-zsh/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 export PATH=/home/$USER/.local/bin:$PATH
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" > /home/$USER/.zshrc || true
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+echo 'Some help here:
+Ctrl+O - save input to clipboard;
+Ctrl+A - history search;
+Esc Esc - sudo !!;
+Left arrow - accept autosuggestion;'" > /home/$USER/.zshrc || true
