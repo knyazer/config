@@ -28,7 +28,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 function help () {
     echo 'Some help here:
     Ctrl+O - save input to clipboard;
-    Ctrl+A - history search;
+    Ctrl+R - history search;
     Esc Esc - sudo !!;
     Left arrow - accept autosuggestion;'
 }
