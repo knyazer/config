@@ -25,16 +25,33 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export PATH=$HOME/.local/bin:$PATH
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-function help () {
+
+# Help function
+function help {
     echo 'Some help here:
     Ctrl+O - save input to clipboard;
     Ctrl+R - history search;
     Esc Esc - sudo !!;
-    Left arrow - accept autosuggestion;'
+    Left arrow - accept autosuggestion;
+    vpn up - connect to default vpn;
+    vpn down - disconnect from default vpn;
+    charge (0-100) - set the max charge percentage, I prefer 60 by default;
+    '
 }
 
+# Some default aliases
 alias cls=clear
 alias ll=ls -l
 alias la=ls -a
+
+# VPN controls
+function vpn {
+    wg-quick \$1 xeovo-nl
+}
+
+# tlp (battery) controls
+function charge {
+    tlp setcharge 0 \$1
+}
 
 " > $HOME/.zshrc || true

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source misc.sh
+
 # Correct rights
 chown root:root -R /etc/wireguard && chmod 600 -R /etc/wireguard || true
 

@@ -12,4 +12,7 @@ Then there are generally a few commands you might want to use:
 
 ```bash ubuntu_zsh_install.sh``` which installs zsh for the current user
 
-This should work for Ubuntu 22.04, though supposedly might work for almost any debian-based distro.
+This should work for Ubuntu 22.04, though supposedly might work for almost any debian-based distro. 
+
+## Usage
+There is a function ```help``` available, which provide some info about shortcuts and controls
