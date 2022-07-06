@@ -9,7 +9,7 @@ source config.sh
 source misc.sh
 
 # Update mirrors list
-source ubuntu_mirrors_rank.sh
+bash ubuntu_mirrors_rank.sh || true
 
 # Upgrade all the packages
 apt upgrade -y
@@ -39,7 +39,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install -y flathub io.bassi.Amberol || true
 
 # vscode - text editor
-source ubuntu_vscode_install.sh
+bash ubuntu_vscode_install.sh || true
 
 # CLion - C/C++ IDE
 snap install clion --classic || true
@@ -72,6 +72,15 @@ gh auth login
 git config --global user.email $EMAIL
 git config --global user.name $NAME
 
+# zsh for root
+bash ubuntu_zsh_install.sh || true
+
+# zsh for user
+sudo -H -u $USER bash ubuntu_zsh_install || true
+
+# Charging controls configuration
+bash ubuntu_battery_control_setup.sh || true
+
 # Wireguard autostart config
 read -p "You have to add the wireguard vpn keys to the /etc/wireguard. After you do that, press any key to continue. Otherwise, press ctrl+c to exit installer"
-source ubuntu_vpn_setup.sh
+bash ubuntu_vpn_setup.sh || true
