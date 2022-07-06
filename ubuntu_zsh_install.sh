@@ -32,4 +32,9 @@ function help () {
     Esc Esc - sudo !!;
     Left arrow - accept autosuggestion;'
 }
+
+alias cls=clear
+alias ll=ls -l
+alias la=ls -a
+
 " > $HOME/.zshrc || true
