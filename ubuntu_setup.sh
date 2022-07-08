@@ -34,6 +34,9 @@ add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable &&
 apt-get update &&
 apt_install qbittorrent || true
 
+# libreoffice
+snap install libreoffice || true
+
 # amberol - cute music player
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub io.bassi.Amberol || true
@@ -80,6 +83,9 @@ sudo -H -u $USER bash ubuntu_zsh_install || true
 
 # Charging controls configuration
 bash ubuntu_battery_control_setup.sh || true
+
+# Temperature sensors setup
+bash ubuntu_sensors_setup.sh || true
 
 # Wireguard autostart config
 read -p "You have to add the wireguard vpn keys to the /etc/wireguard. After you do that, press any key to continue. Otherwise, press ctrl+c to exit installer"
