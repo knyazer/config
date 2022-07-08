@@ -19,3 +19,7 @@ for i in "$@"
      aptitude -y install $i || true
  done
 }
+
+change_config_field_value() {
+        sed -i "s/\($2 *= *\).*/\1$3/" $1
+}
