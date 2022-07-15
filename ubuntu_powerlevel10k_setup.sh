@@ -9,5 +9,5 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc || true
 
 # Copy and enable the powerlevel10k config to $HOME
-cp .p10k.zsh ~/
+yes | /bin/cp -rf .p10k.zsh ~/
 echo 'source ~/.p10k.zsh' >>~/.zshrc || true
