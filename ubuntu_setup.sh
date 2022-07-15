@@ -90,6 +90,9 @@ bash ubuntu_battery_control_setup.sh || true
 # Temperature sensors setup
 bash ubuntu_sensors_setup.sh || true
 
+# todo-cli setup
+bash ubuntu_todo_install.sh
+
 # Wireguard autostart config
 read -p "You have to add the wireguard vpn keys to the /etc/wireguard. After you do that, press any key to continue. Otherwise, press ctrl+c to exit installer"
 bash ubuntu_vpn_setup.sh || true

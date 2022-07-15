@@ -39,10 +39,11 @@ function help {
     '
 }
 
-# Some default aliases
+# Some aliases
 alias cls=clear
 alias ll=ls -l
-alias la=ls -a
+alias la=ls -la
+alias t=todo.sh
 
 # VPN controls
 function vpn {
