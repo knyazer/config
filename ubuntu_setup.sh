@@ -27,7 +27,7 @@ apt upgrade -y
 # gh - github cli
 apt_install htop neofetch docker clang lldb lld curl aptitude terminator base-devel cmake node python3.10 python3-pip \
         python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools build-essential vlc openresolv \
-        wireguard xclip openjdk-8-jdk openjdk-17-jdk openjdk-17-jre gnome-tweaks || true
+        wireguard xclip openjdk-8-jdk openjdk-17-jdk openjdk-17-jre gnome-tweaks linux-oem-22.04 mesa-utils || true
 
 # qbittorrent - cute torrent client
 add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable &&
@@ -74,6 +74,9 @@ prime-select nvidia || true
 gh auth login
 git config --global user.email $EMAIL
 git config --global user.name $NAME
+
+# fonts for zsh
+bash ubuntu_fonts_install.sh || true
 
 # zsh for root
 bash ubuntu_zsh_install.sh || true

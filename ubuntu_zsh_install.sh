@@ -16,7 +16,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-$HOM
 
 # .zshrc
 echo "export ZSH='$HOME/.oh-my-zsh'
-ZSH_THEME='pmcgee'
+ZSH_THEME='pmcgee' # Comment this line if you experience problems with powerlevel10k
 zstyle ':omz:update' mode auto
 plugins=(git screen gh sudo zsh-navigation-tools copybuffer)
 fpath+=${ZSH_CUSTOM:-${ZSH:-$HOME/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -55,3 +55,5 @@ function charge {
 }
 
 " > $HOME/.zshrc || true
+
+bash ubuntu_powerlevel10k_setup.sh || true
