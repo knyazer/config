@@ -4,4 +4,4 @@ export USER=knyaz
 
 export NAME="Roma Knyaz"
 
-export EMAIL="mail@knyaz.tech"
+export EMAIL="git@knyaz.tech"
