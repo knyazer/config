@@ -31,7 +31,7 @@ function help {
     echo 'Some help here:
     Ctrl+O - save input to clipboard;
     Ctrl+R - history search;
-    Esc Esc - sudo !!;
+    Esc Esc - sudo \!\!;
     Left arrow - accept autosuggestion;
     vpn up - connect to default vpn;
     vpn down - disconnect from default vpn;
