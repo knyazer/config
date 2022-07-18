@@ -10,3 +10,6 @@ change_config_field_value /usr/share/tlp/defaults.conf USB_AUTOSUSPEND 0
 systemctl enable tlp.service || true
 tlp setcharge 0 60 || true
 tlp start || true
+
+# Disable default thingy as it breaks everything
+sudo systemctl disable power-profiles-daemon.service
