@@ -28,7 +28,13 @@ apt upgrade -y
 apt_install htop neofetch docker docker.io clang lldb lld curl aptitude terminator base-devel cmake node python3.10 python3-pip \
         python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools build-essential vlc openresolv \
         wireguard xclip openjdk-8-jdk openjdk-17-jdk openjdk-17-jre gnome-tweaks linux-oem-22.04 mesa-utils smartmontools \
-        linux-tools-common linux-tools-generic || true
+        linux-tools-common linux-tools-generic linux-tools-$(uname -r) || true
+
+# Config perf
+sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
+sh -c 'echo kernel.perf_event_paranoid=1 >> /etc/sysctl.d/99-perf.conf'
+sh -c 'echo kernel.kptr_restrict=0 >> /etc/sysctl.d/99-perf.conf'
+sh -c 'sysctl --system'
 
 # qbittorrent - cute torrent client
 add-apt-repository --yes ppa:qbittorrent-team/qbittorrent-stable &&
