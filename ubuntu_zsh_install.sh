@@ -14,11 +14,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosu
 # Advanced completion
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-$HOME/.oh-my-zsh}/custom}/plugins/zsh-completions
 
+# Syntax highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # .zshrc
 echo "export ZSH='$HOME/.oh-my-zsh'
 ZSH_THEME='pmcgee' # Comment this line if you experience problems with powerlevel10k
 zstyle ':omz:update' mode auto
-plugins=(git screen gh sudo zsh-navigation-tools copybuffer)
+plugins=(git screen gh sudo zsh-navigation-tools copybuffer zsh-syntax-highlighting)
 fpath+=${ZSH_CUSTOM:-${ZSH:-$HOME/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 export LANG=en_US.UTF-8
@@ -41,8 +44,7 @@ function help {
 
 # Some aliases
 alias cls=clear
-alias ll=ls -l
-alias la=ls -la
+alias ll=ls -la
 alias t=todo.sh
 
 # VPN controls
