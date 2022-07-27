@@ -28,7 +28,7 @@ apt upgrade -y
 apt_install htop neofetch docker docker.io clang lldb lld curl aptitude terminator base-devel cmake node python3.10 python3-pip \
         python3-venv flatpak gnome-tweak-tool zsh git vim node wget gpg gh python-setuptools build-essential vlc openresolv \
         wireguard xclip openjdk-8-jdk openjdk-17-jdk openjdk-17-jre gnome-tweaks linux-oem-22.04 mesa-utils smartmontools \
-        linux-tools-common linux-tools-generic linux-tools-$(uname -r) doxygen doxygen-gui python3-sphinx || true
+        linux-tools-common linux-tools-generic linux-tools-$(uname -r) doxygen doxygen-gui python3-sphinx nasm || true
 
 # Config perf
 sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
